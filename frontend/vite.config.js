@@ -8,5 +8,18 @@ export default defineConfig({
     proxy: {
       '/api': 'http://127.0.0.1:8000',
     }
+  },
+  test: {
+    environment: 'jsdom',
+    setupFiles: ['./src/setupTests.js'],
+    globals: true,
+    env: {
+      VITE_API_URL: 'http://127.0.0.1:8000'
+    },
+    server: {
+      deps: {
+        inline: ['@mui/material', '@mui/icons-material', '@emotion/react', '@emotion/styled']
+      }
+    }
   }
 })

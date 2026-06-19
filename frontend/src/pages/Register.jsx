@@ -67,7 +67,7 @@ function Register() {
             </Typography>
           </Box>
 
-          <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }}>
+          <form onSubmit={handleSubmit(onSubmit)} style={{ width: '100%' }} noValidate>
             <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.5 }}>
               <Controller
                 name="name"

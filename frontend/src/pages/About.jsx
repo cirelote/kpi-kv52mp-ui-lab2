@@ -40,8 +40,8 @@ function About() {
       
       <Card>
         <CardContent sx={{ p: 4 }}>
-          <Grid container spacing={4} alignItems="center">
-            <Grid item xs={12} md={4} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Box sx={{ display: 'flex', flexDirection: { xs: 'column', md: 'row' }, gap: 4, alignItems: 'center' }}>
+            <Box sx={{ flex: { xs: '1 1 auto', md: '0 0 33%' }, display: 'flex', justifyContent: 'center' }}>
               <Box 
                 sx={{ 
                   bgcolor: aboutData?.logo_url ? 'transparent' : 'primary.main', 
@@ -73,8 +73,8 @@ function About() {
                   <CheckCircleOutlineIcon sx={{ color: 'white', fontSize: 80 }} />
                 )}
               </Box>
-            </Grid>
-            <Grid item xs={12} md={8}>
+            </Box>
+            <Box sx={{ flex: '1 1 auto' }}>
               <Typography variant="h3" gutterBottom sx={{ fontWeight: 800, color: 'primary.main' }}>
                 {appName}
               </Typography>
@@ -82,14 +82,14 @@ function About() {
                 Персональний менеджер завдань
               </Typography>
               <Divider sx={{ my: 2, borderColor: 'rgba(255,255,255,0.1)' }} />
-              <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2 }}>
                 {description}
               </Typography>
-              <Typography variant="body1" paragraph sx={{ lineHeight: 1.8 }}>
+              <Typography variant="body1" sx={{ lineHeight: 1.8, mb: 2 }}>
                 Додаток розроблено з використанням найсучасніших технологій: <strong>ReactJS</strong> для швидкого та реактивного інтерфейсу, та <strong>Material UI</strong> для забезпечення преміального дизайну та зручності користування на будь-яких пристроях.
               </Typography>
-            </Grid>
-          </Grid>
+            </Box>
+          </Box>
         </CardContent>
       </Card>
     </Box>

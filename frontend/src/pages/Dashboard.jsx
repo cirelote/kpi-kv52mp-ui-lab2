@@ -159,15 +159,19 @@ function Dashboard() {
                     />
                   </ListItemIcon>
                   <ListItemText
-                    primary={task.title}
-                    primaryTypographyProps={{
-                      sx: { 
-                        textDecoration: task.is_completed ? 'line-through' : 'none',
-                        color: task.is_completed ? 'text.secondary' : 'text.primary',
-                        fontWeight: task.is_completed ? 'normal' : '500',
-                        fontSize: '1.1rem'
-                      }
-                    }}
+                    disableTypography
+                    primary={
+                      <Typography
+                        sx={{ 
+                          textDecoration: task.is_completed ? 'line-through' : 'none',
+                          color: task.is_completed ? 'text.secondary' : 'text.primary',
+                          fontWeight: task.is_completed ? 'normal' : '500',
+                          fontSize: '1.1rem'
+                        }}
+                      >
+                        {task.title}
+                      </Typography>
+                    }
                   />
                 </ListItem>
               </React.Fragment>

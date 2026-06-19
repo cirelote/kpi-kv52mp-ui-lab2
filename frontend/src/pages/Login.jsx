@@ -62,7 +62,7 @@ function Login() {
             </Typography>
           </Box>
 
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit(onSubmit)} noValidate>
             <TextField
               fullWidth
               label="Email"
